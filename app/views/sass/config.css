@@ -1,0 +1,78 @@
+/*
+
+0 - 600px:      phone
+600 - 900px     Tablet: portrait
+900 - 1200px    Tablet: landscape
+[1200 - 1800]   is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+Order: 
+Base + typhography > 
+general layout + grid >
+page layout >
+components
+
+1em = 16px
+600 / 16 = 37.5em
+*/
+h1, h3, h4 {
+  text-transform: uppercase; }
+
+/* resets, style for html and body */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box; }
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 2rem; }
+
+h3 {
+  margin-bottom: 1rem; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #000; }
+
+h1 {
+  color: #000;
+  font-size: 4.8rem;
+  font-weight: 400;
+  word-spacing: .4rem;
+  letter-spacing: .1rem;
+  text-align: center; }
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700; }
+
+h4 {
+  font-size: 2.1rem;
+  font-weight: 700; }

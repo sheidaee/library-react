@@ -1,0 +1,17 @@
+// GRID
+$grid-width: 114rem;
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.row {
+    max-width: $grid-width;
+    margin: 0 auto;
+    margin-bottom: 2rem;    
+    @include clearfix;        
+}

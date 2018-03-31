@@ -1,0 +1,56 @@
+/*
+
+0 - 600px:      phone
+600 - 900px     Tablet: portrait
+900 - 1200px    Tablet: landscape
+[1200 - 1800]   is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+Order: 
+Base + typhography > 
+general layout + grid >
+page layout >
+components
+
+1em = 16px
+600 / 16 = 37.5em
+*/
+[class*="col"] {
+  float: left;
+  /* 900px */ }
+  [class*="col"]:nth-child(3n + 3) {
+    margin-bottom: 3rem; }
+  [class*="col"]:not(:nth-child(3n + 3)) {
+    margin-right: 3rem;
+    /* 900px */ }
+    @media (max-width: 56.25em) {
+      [class*="col"]:not(:nth-child(3n + 3)) {
+        margin-right: 0; } }
+  @media (max-width: 56.25em) {
+    [class*="col"] {
+      width: 100% !important;
+      margin-bottom: 6rem !important; } }
+
+.col1Of2 {
+  width: calc((100% - 3rem) / 2); }
+
+.col1Of3 {
+  width: calc((100% - 2 * 3rem) / 3); }
+
+.col2Of3 {
+  width: calc(2 * ((100% - 2 * 3rem) / 3) + 3rem); }
+
+.col1Of4 {
+  width: calc((100% - 3 * 3rem) / 4); }
+
+.col2Of4 {
+  width: calc(2 * ((100% - 3 * 3rem) / 4) + 3rem); }
+
+.col3Of4 {
+  width: calc(3 * ((100% - 3 * 3rem) / 4) + (2 * 3rem)); }
